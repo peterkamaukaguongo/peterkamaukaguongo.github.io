@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peter Kamau — student developer building responsive web projects using HTML, CSS and JavaScript. Portfolio and contact information.">
+    <title>My Website Portfolio</title>
+    <link rel="stylesheet" href="general/css/general.css">
+    <link rel="stylesheet" href="general/css/body.css">
+    <link rel="stylesheet" href="projects-portfolio/css/projects.css">
+    <link rel="stylesheet" href="general/css/header.css">
+    <link rel="stylesheet" href="skills/css/skills.css">
+    <link rel="stylesheet" href="contacts/css/contact.css">
+    <link rel="stylesheet" href="about-me/css/about_me.css">
+    <link rel="stylesheet" href="home/css/home_page.css">
+</head>
+<body>
+    <a class="skip-link" href="#home-page">Skip to main content</a>
+    <nav class="header">
+        <a href="#home-page">
+            <img src="icons/bx-home-alt-2.svg" alt="" aria-hidden="true">
+            <span>Home</span>
+        </a>
+        <a href="#projects">
+            <img src="icons/bx-terminal.svg" alt="" aria-hidden="true">
+            <span>Projects</span>
+        </a>
+        <a href="#skills">
+            <img src="icons/bx-education.svg" alt="" aria-hidden="true">
+            <span>Skills</span>
+        </a>
+        <a href="#about-me">
+            <img src="icons/bx-database.svg" alt="" aria-hidden="true">
+            <span>About Me</span>
+        </a>
+        <a href="#contacts">
+            <img src="icons/bx-message-circle.svg" alt="" aria-hidden="true">
+            <span>Contacts</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section id="home-page" class="home-page">
+        <h2>HOME</h2>
+        <div class="wrapper">
+            <div class="profile">
+                <img src="general/images/blackhole.jpg" alt="Portrait of Peter Kamau" width="180" height="180">
+            </div>
+            <div class="info">
+                <div class="name">
+                    <h1>PETER KAMAU K.</h1>
+                </div>
+                <div>
+                    <p>
+                        First-year Computer Science student at JKUAT.
+                    </p>
+                    <p>
+                        Currently learning HTML, CSS, Python, C, and JavaScript.
+                    </p>
+                    <p>
+                        Based in Kenya.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+                <a href="#projects" class="b1">MY PROJECTS</a>
+                <a href="#contacts" class="b2">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive personal website built to showcase my skills,
+                    projects, and learning journey.
+                </p>
+                <span class="tech">HTML • CSS • JavaScript</span>
+                <div class="project-links">
+                    <a href="#" class="project-btn primary">Live Demo</a>
+                    <a href="#" class="project-btn secondary">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <p>&#183; Python</p>
+                <p>&#183; C</p>
+                <p>&#183; JavaScript</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Technologies</h3>
+                <p>&#183; HTML5</p>
+                <p>&#183; CSS3</p>
+                <p>&#183; Responsive Design</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Concepts</h3>
+                <p>&#183; Git & GitHub</p>
+                <p>&#183; VS Code</p>
+                <p>&#183; Problem Solving</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-me" class="about-me">
+        <h2>ABOUT ME</h2>
+        <div class="about-container">
+            <p>
+            I am a first-year Computer Science student at JKUAT with a strong interest
+            in software development and problem solving. I enjoy building practical
+            projects that help me understand how things work under the hood.
+            </p>
+
+            <p>
+            My current focus is on web development using HTML, CSS, and JavaScript,
+            alongside learning core programming concepts in C and Python. I am
+            constantly improving my skills by building small projects and refining
+            my code.
+            </p>
+
+            <p>
+            I am looking to grow into a well-rounded software developer by gaining
+            hands-on experience, learning best practices, and working on real-world
+            problems.
+            </p>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2>CONTACT ME</h2>
+        <div class="contacts-card">
+            <p>
+                I’m open to learning opportunities, collaborations, 
+                and feedback. Feel free to reach out.
+            </p>
+            <div class="contact-links">
+                <a class="email" href="mailto:peterkamaukaguongo@gmail.com" target="_blank" rel="noopener noreferrer">My Email</a>
+                <a class="github" href="https://github.com/peterkamaukaguongo" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('.header');
+        
+        if (menuToggle && header) {
+            menuToggle.addEventListener('click', () => {
+                header.classList.toggle('mobile-open');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            header.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('mobile-open');
+                    menuToggle.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+ 
